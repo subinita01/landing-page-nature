@@ -1,0 +1,279 @@
+/* Reset all default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+/* Set full width and height for base HTML document */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main container to hold all content */
+#main {
+    width: 100%;
+    min-height: 100vh; /* Ensures content fills at least the viewport height */
+}
+
+/* Top section with background image */
+#top {
+    width: 100%;
+    min-height: 60vh; /* Takes 60% of viewport height */
+    background-image: url("https://plus.unsplash.com/premium_photo-1666248657238-a315c5f63cc2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D");
+    background-size: cover; /* Makes image cover the entire container */
+    background-position: 50% 40%; /* Centers image horizontally and slightly above center vertically */
+}
+
+/* Semi-transparent overlay for top section */
+#overlay {
+    width: 100%;
+    min-height: inherit; /* Inherits min-height from parent */
+    background-color: rgba(17, 0, 0, 0.073); /* Very subtle dark overlay */
+    position: relative; /* Establishes positioning context for absolute elements */
+    background: linear-gradient(to bottom, rgba(17, 0, 0, 0.05) 70%, rgba(209, 192, 168, 0.3) 100%);
+}
+
+/* Text container within the overlay */
+#text {
+    width: 100%;
+    bottom: 20%; /* Positions 20% from bottom of overlay */
+    padding: 0 10vw; /* Horizontal padding based on viewport width */
+    position: absolute; /* Takes it out of normal flow */
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Spreads content to edges */
+    align-items: center; /* Centers items vertically */
+    font-size: 4vw; /* Responsive font size based on viewport width */
+    font-weight: 300; /* Light font weight */
+    color: #1A3A3A; /* midnight bluefor contrast against background */
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.4); /* Subtle white shadow for readability */
+}
+
+/* Right section of the text container */
+#textright {
+    display: flex; /* Enables flexbox */
+    width: 40%; /* Takes 40% of the text container width */
+    justify-content: space-between; /* Spaces children evenly */
+    color: rgb(0, 25, 22); /* Dark teal color */
+} 
+
+/* Paragraphs within the right text section */
+#textright p {
+    width: 45%; /* Takes 45% of textright container */
+    font-size: 1.25rem; /* Sets absolute font size in rem for better scaling */
+    align-items: center; /* Centers content vertically */
+    color: #0F2C35; /* Dark slate blue for contrast */
+    font-weight: 500; /* Medium font weight for readability */
+}
+
+/* Icon container within textright */
+#icon {
+    display: flex; /* Enables flexbox */
+    color: #243447; /* Deep navy blue color */
+}
+
+/* Main heading within text container */
+#text h1 {
+    font-size: 4vw; /* Responsive font size */
+    font-weight: 300; /* Light font weight */
+    color: #5E3023; /* Rich burgundy color */
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.4); /* Subtle white shadow for readability */
+}
+
+/* Bottom section with grid layout */
+#bottom {
+    width: 100%;
+    min-height: 40vh; /* Takes 40% of viewport height */
+    display: flex; /* Enables flexbox */
+    flex-wrap: nowrap; /* Prevents items from wrapping to new row */
+}
+
+/* First column of bottom section */
+#bone {
+    width: 25%; /* Takes 25% of bottom width */
+    min-height: inherit; /* Inherits height from parent */
+    padding: 30px; /* Internal spacing */
+    background-color: #F5F1E9; /* Soft cream color */
+}
+
+/* Main heading within bone column */
+#bone h1 {
+    font-size: 30px; /* Fixed font size */
+    margin-top: 20px; /* Space above heading */
+}
+
+/* Secondary heading within bone column */
+#bone h2 {
+    font-weight: 200; /* Very light font weight */
+    margin-top: 40px; /* Generous space above */
+}
+
+/* Second column of bottom section with background image */
+#btwo {
+    width: 25%; /* Takes 25% of bottom width */
+    min-height: inherit; /* Inherits height from parent */
+    background-color: yellow; /* Fallback color if image fails to load */
+    background-position: center; /* Centers background image */
+    background-size: cover; /* Makes image cover entire container */
+    background-image: url("https://images.unsplash.com/photo-1747396379098-714c21bde6f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+/* Third column of bottom section */
+#bthree {
+    width: 20%; /* Takes 20% of bottom width */
+    min-height: inherit; /* Inherits height from parent */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+}
+
+/* Top half of third column */
+#bthreetop {
+    padding: 30px; /* Internal spacing */
+    width: 100%; /* Full width of parent */
+    height: 50%; /* Takes half of bthree height */
+    background-color: #e2725b; /* Terracotta color */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers content vertically */
+}
+
+/* Heading within bthreetop */
+#bthreetop h1 {
+    margin-top: 0; /* Removes default top margin */
+    font-size: 1.5rem; /* Sets font size in rem for better scaling */
+    margin-bottom: 15px; /* Space below heading */
+    line-height: 1.2; /* Controls line spacing for readability */
+}
+
+/* Paragraph within bthreetop */
+#bthreetop p {
+    margin-top: 0; /* Removes default top margin */
+    font-size: 0.9rem; /* Slightly smaller font for hierarchy */
+    line-height: 1.4; /* Generous line spacing for readability */
+    max-width: 90%; /* Prevents text from stretching too wide */
+}
+
+/* Bottom half of third column with background image */
+#bthreebottom {
+    width: 100%; /* Full width of parent */
+    height: 50%; /* Takes half of bthree height */
+    background: url("https://images.unsplash.com/photo-1744768326067-8b9835957c86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center; /* Centers background image */
+    background-size: cover; /* Makes image cover entire container */
+}
+
+/* Fourth column of bottom section */
+#bfour {
+    width: 30%; /* Takes 30% of bottom width */
+    min-height: inherit; /* Inherits height from parent */
+    padding: 30px; /* Internal spacing */
+    background-color: #A49CAB; /* dusky lavender color */
+    color: black; /* Text color */
+}
+
+/* Heading within bfour */
+#bfour h1 {
+    margin-top: 10px; /* Space above heading */
+}
+
+/* Notification style container */
+.notf {
+    margin-top: 50px; /* Space above container */
+    padding: 30px; /* Internal spacing */
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Spreads content to edges */
+    width: 80%; /* Takes 80% of parent width */
+    font-size: 20px; /* Fixed font size */
+}
+
+/* Paragraph within notification container */
+.notf p {
+    margin-top: 30px; /* Space above paragraph */
+    font-size: 15px; /* Fixed font size */
+    width: 86%; /* Takes 86% of parent width */
+}
+
+/* Profile photo within notification container */
+.notf #photos {
+    margin-top: 20px; /* Space above photo */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background-color: red; /* Fallback color if image fails */
+    background-image: url("https://images.unsplash.com/photo-1746802284762-2e867039a2da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border-radius: 50%; /* Creates circular shape */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    /* Change text layout to vertical */
+    #overlay #text {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align to left edge */
+    }
+    
+    /* Increase heading size on small screens */
+    #text h1 {
+        font-size: 10vw; /* Larger font size for visibility */
+    }
+    
+    /* Adjust bottom section height and layout */
+    #bottom {
+        min-height: 20vh; /* Reduce minimum height */
+        flex-direction: column; /* Stack elements vertically */
+    }
+    
+    /* Change textright to vertical layout */
+    #overlay #text #textright {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align to left edge */
+        width: 100%; /* Full width on mobile */
+    }
+    
+    /* Adjust paragraph width and spacing */
+    #overlay #text #textright p {
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px; /* Add space above */
+    }
+    
+    /* Adjust icon spacing */
+    #overlay #text #textright #icon {
+        margin-top: 30px; /* Add space above */
+    }
+    
+    /* Make all bottom columns full width on mobile */
+    #bone, #btwo, #bthree, #bfour {
+        width: 100%; /* Full width */
+    }
+    
+    /* Increase height of third column sections */
+    #bthreetop, #bthreebottom {
+        min-height: 40vh; /* Set minimum height for visibility */
+    }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Adjust right text section width */
+    #textright {
+        width: 50%; /* Increase width on tablets */
+    }
+    
+    /* Adjust column widths for better proportions on tablets */
+    #bone {
+        width: 30%; /* Increase width */
+    }
+    
+    #btwo {
+        width: 30%; /* Increase width */
+    }
+    
+    #bthree {
+        width: 20%; /* Maintain width */
+    }
+    
+    #bfour {
+        width: 20%; /* Reduce width */
+    }
+}
